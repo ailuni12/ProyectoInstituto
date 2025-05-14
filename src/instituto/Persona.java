@@ -35,10 +35,6 @@ public class Persona {
         return edad >= 18;
     }
     
-    private boolean esPositivo(int n){
-        return n >= 0;
-    }
-    
     public void mostrarInformacion() {
         //que imprima por consola los datos de la persona.
         System.out.println("DATOS:\nNombre: " + nombre + "\nApellido: "
