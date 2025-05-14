@@ -12,6 +12,11 @@ public class Direccion {
         this.ciudad = ciudad;
         this.codigoPostal = codigoPostal;
     }
+
+    @Override
+    public String toString() {
+        return "Direccion{" + "calle=" + calle + ", numero=" + numero + ", ciudad=" + ciudad + ", codigoPostal=" + codigoPostal + '}';
+    }
     
     
 }

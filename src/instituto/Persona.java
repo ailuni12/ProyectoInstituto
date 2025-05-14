@@ -2,6 +2,7 @@ package instituto;
 
 import javax.swing.JOptionPane;
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Persona {
     private String nombre;
@@ -20,22 +21,13 @@ public class Persona {
         this.dni = dni;
         this.email = email;
         this.fechaDeNacimiento = fechaDeNacimiento;
+        calcularEdad();
         
         direccion = new Direccion(calle,numero,ciudad,codigoPostal);
     }
     
-    private void ingresarEdad(){
-        int edad;
-        String aux;
-        
-        aux = JOptionPane.showInputDialog("Ingrese la edad de la persona: ");
-        edad = Integer.parseInt(aux);
-        
-        while(!esPositivo(edad)){
-            aux = JOptionPane.showInputDialog("Valor invalido. Ingrese la edad de la persona: ");
-            edad = Integer.parseInt(aux);
-        }
-        
+    private void calcularEdad(){
+        int edad = Period.between(fechaDeNacimiento, LocalDate.now()).getYears();
         this.edad = edad;
     }
     
@@ -47,10 +39,11 @@ public class Persona {
         return n >= 0;
     }
     
-    private void mostrarInformacion() {
+    public void mostrarInformacion() {
         //que imprima por consola los datos de la persona.
         System.out.println("DATOS:\nNombre: " + nombre + "\nApellido: "
-        + apellido + "\nEdad: " + edad + "\nDNI: " + dni + "\nEmail: " + email);
+        + apellido + "\nEdad: " + edad + "\nDNI: " + dni + "\nEmail: " + email
+        + "\nDireccion: " + direccion.toString());
     }
 
 }
