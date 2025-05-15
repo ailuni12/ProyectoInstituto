@@ -16,10 +16,9 @@ public class Materia {
         this.alumnos= new ArrayList<>(); //inicializa la lista en el constructor
     }
 
-    @Override
-    public String toString() {
-        return "Materia:" + "\nComision: " + comision + 
-                "\nNombre: " + nombre + "\nDocente: " + docente.mostrarNombre();
+    public void mostrarInformacion() {
+        System.out.println("Materia:" + "\nComision: " + comision + 
+                "\nNombre: " + nombre + "\nDocente: " + docente.mostrarNombre());
     }
     
     public void inscribirAlumno(Alumno alumno){
@@ -27,6 +26,7 @@ public class Materia {
     }
     
     public void inscriptos(){
+        System.out.println("Alumnos incriptos:");
         for (Alumno i : alumnos){
             System.out.println(i.mostrarNombre());
         }

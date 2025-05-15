@@ -32,6 +32,12 @@ public class Main {
         alumno2.inscripcionAsignatura(materia2);
         alumno3.inscripcionAsignatura(materia1);
         
+        materia1.inscribirAlumno(alumno3);
+        materia1.inscribirAlumno(alumno1);
+        
+        materia2.inscribirAlumno(alumno1);
+        materia2.inscribirAlumno(alumno2);
+        
 
         alumno1.mostrarInformacion();
         alumno1.matriculaciones();
@@ -47,6 +53,12 @@ public class Main {
         System.out.println("");
         docente2.mostrarInformacion();
         docente2.asignaturasDictadas();
+        System.out.println("");
+        materia1.mostrarInformacion();
+        materia1.inscriptos();
+        System.out.println("");
+        materia2.mostrarInformacion();
+        materia2.inscriptos();
     }
     
 }
