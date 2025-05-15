@@ -13,18 +13,27 @@ public class Materia {
         this.comision = comision;
         this.nombre = nombre;
         this.docente = docente;
-        this.alumnos= new ArrayList<>();
+        this.alumnos= new ArrayList<>(); //inicializa la lista en el constructor
     }
 
     @Override
     public String toString() {
         return "Materia:" + "\nComision: " + comision + 
-                "\nNombre=" + nombre + "\nDocente=" + docente + 
-                "\nAlumnos=" + alumnos + '}';
+                "\nNombre: " + nombre + "\nDocente: " + docente.mostrarNombre();
     }
     
     public void inscribirAlumno(Alumno alumno){
         alumnos.add(alumno);
+    }
+    
+    public void inscriptos(){
+        for (Alumno i : alumnos){
+            System.out.println(i.mostrarNombre());
+        }
+    }
+    
+    public String mostrarNombre() {
+        return nombre;
     }
 }
 

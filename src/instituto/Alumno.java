@@ -14,10 +14,18 @@ public class Alumno extends Persona {
         super(nombre, apellido, dni, email, calle, 
                 numero, ciudad, codigoPostal, 
                 fechaDeNacimiento);
+        this.materiasCursadas = new ArrayList<>(); //inicializa la lista en el constructor
     }
     
     public void inscripcionAsignatura(Materia materia){
         materiasCursadas.add(materia);
+    }
+    
+    public void matriculaciones(){
+        System.out.println("Matriculaciones:");
+        for (Materia i : materiasCursadas){
+            System.out.println(i.mostrarNombre());
+        }
     }
     
 }

@@ -41,5 +41,9 @@ public class Persona {
         + apellido + "\nEdad: " + edad + "\nDNI: " + dni + "\nEmail: " + email
         + "\nDireccion: " + direccion.toString());
     }
+    
+    public String mostrarNombre() {
+        return nombre;
+    }
 
 }
