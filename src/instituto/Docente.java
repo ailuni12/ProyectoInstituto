@@ -2,8 +2,10 @@
 package instituto;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Docente extends Persona {
+    private ArrayList<Materia> materiasDictadas;
     
     public Docente(String nombre, String apellido, 
             int dni, String email, String calle, int numero, 
@@ -14,4 +16,7 @@ public class Docente extends Persona {
                 fechaDeNacimiento);
     }
     
+    public void asignarMateria(Materia materia){
+        materiasDictadas.add(materia);
+    }
 }
