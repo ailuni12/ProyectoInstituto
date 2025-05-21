@@ -6,7 +6,8 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        //ArrayList<Alumno> alumnos = new ArrayList();
+        ArrayList<Alumno> alumnos = new ArrayList();
+        ArrayList<Docente> docentes = new ArrayList();
         
         Alumno alumno1 = new Alumno("Alfonso", "Alligator", 12345678, "alfie@example.com", 
                 "Pera", 742, "Yacare, Corrientes", "12345", LocalDate.of(1990, 5, 14));
@@ -15,11 +16,17 @@ public class Main {
         Alumno alumno3 = new Alumno("Carlos", "Cat", 11223344, "carlos@example.com", 
                 "Naranja", 56, "Campo de los Pumas, Formosa", "67890", LocalDate.of(1992, 7, 27));
         
-        
         Docente docente1 = new Docente("Rosa", "Cormoran", 33445566, "rosa.cor@example.com", 
                 "Durazno", 89, "Caniada de los Pajaros, Santiago del Estero", "13579", LocalDate.of(1978, 3, 22));
         Docente docente2 = new Docente("Tomas", "Tigre", 99887766, "tomasti@example.com", 
                 "Melon", 321, "Paso del Tigre, Corrientes", "24680", LocalDate.of(1969, 9, 10));
+        
+        alumnos.add(alumno1);
+        alumnos.add(alumno2);
+        alumnos.add(alumno3);
+        
+        docentes.add(docente1);
+        docentes.add(docente2);
         
         Materia materia1 = new Materia(202,"Algebra",docente1);
         Materia materia2 = new Materia(103,"Algoritmos",docente2);
