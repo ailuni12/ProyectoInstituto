@@ -13,4 +13,8 @@ public class Administrativo extends Persona {
                 fechaDeNacimiento);
     }
     
+    public void inscribirAlumno(Alumno alumno, Materia materia){
+        alumno.inscribirseMateria(materia);
+    }
+    
 }

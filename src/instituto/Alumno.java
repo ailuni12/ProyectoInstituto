@@ -17,7 +17,8 @@ public class Alumno extends Persona {
         this.materiasCursadas = new ArrayList<>(); //inicializa la lista en el constructor
     }
     
-    public void inscripcionAsignatura(Materia materia){
+    public void inscribirseMateria(Materia materia){
+        materia.inscribirAlumno(this);
         materiasCursadas.add(materia);
     }
     

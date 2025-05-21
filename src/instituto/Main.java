@@ -27,17 +27,11 @@ public class Main {
         docente1.asignarMateria(materia1);
         docente2.asignarMateria(materia2);
         
-        alumno1.inscripcionAsignatura(materia2);
-        alumno1.inscripcionAsignatura(materia1);
-        alumno2.inscripcionAsignatura(materia2);
-        alumno3.inscripcionAsignatura(materia1);
-        
         materia1.inscribirAlumno(alumno3);
         materia1.inscribirAlumno(alumno1);
         
         materia2.inscribirAlumno(alumno1);
         materia2.inscribirAlumno(alumno2);
-        
 
         alumno1.mostrarInformacion();
         alumno1.matriculaciones();
